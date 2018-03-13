@@ -10,7 +10,7 @@ For more information about what I do see
 | LinkedIn | <https://www.linkedin.com/in/daniel-lennart> |
 
 # Contents
-  - [<a name="ansible"></a>Ansible](#a-nameansibleaansible)
+  - [Ansible](#ansible)
   - [Docker](#docker)
 
 ## <a name="ansible"></a>Ansible
