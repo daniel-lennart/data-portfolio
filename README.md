@@ -13,6 +13,7 @@ For more information about what I do see
   - [Ansible](#ansible)
   - [Docker](#docker)
   - [Terraform](#terraform)
+  - [R](#r)
 
 ## <a name="ansible"></a>Ansible
 ![ansible logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ansible-logo.png)
@@ -35,3 +36,10 @@ Docker is an open platform for developers and sysadmins to build, ship, and run 
 HashiCorp Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
 
 * [Deep learning environment provisioning](../master/terraform)
+
+## R
+![R logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/r.png)
+
+R is a programming language and free software environment for statistical computing and graphics that is supported by the R Foundation for Statistical Computing. The R language is widely used among statisticians and data miners for developing statistical software and data analysis.
+
+* [Exploring movie ratings data](../master/r/movie-ratings)
