@@ -1,0 +1,20 @@
+version: '2'
+services:
+
+  db:
+    build: db/.
+    volumes:
+      - /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=insertsecurepass
+      - MYSQL_DATABASE=users
+  
+  www:
+    restart: always
+    build: www/.
+    ports:
+      - "5000:5000"
+    links:
+      - db
+    depends_on:
+      - db
