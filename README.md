@@ -10,9 +10,9 @@ For more information about what I do see
 | LinkedIn | <https://www.linkedin.com/in/daniel-lennart> |
 
 # Contents
-* [Ansible](##Ansible)
-* [Docker](##docker)
-* [Terraform](##terraform)
+  - [Ansible](#ansible)
+  - [Docker](#docker)
+  - [Terraform](#terraform)
 
 ## <a name="ansible"></a>Ansible
 ![ansible logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ansible-logo.png)
