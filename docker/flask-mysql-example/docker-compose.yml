@@ -7,8 +7,8 @@ services:
       - /var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=insertsecurepass
-      - MYSQL_DATABASE=users
-  
+      - MYSQL_DATABASE=user_db
+
   www:
     restart: always
     build: www/.
