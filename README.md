@@ -23,12 +23,15 @@ Ansible is software that automates software provisioning, configuration manageme
 * [Snippets](../master/ansible/snippets.md)
 
 ## Docker
+![docker logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/docker.png)
+
 Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 
 * Docker files
 * Cheatsheet
 
 ## Terraform
+![terraform logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/terraform.png)
 HashiCorp Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
 
 * [Deep learning environment provisioning](../master/terraform)
