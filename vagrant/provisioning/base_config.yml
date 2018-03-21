@@ -1,0 +1,30 @@
+---
+
+
+- hosts: all
+  become: true
+  vars_files:
+    - CFG.yml
+
+
+  tasks:
+
+    # groups with power
+    - name: Create admin group
+      group: name=admin state=present
+
+    - name: Give admin group sudo
+      lineinfile: "dest=/etc/sudoers state=present regexp='^%admin' line='%admin ALL=(ALL) NOPASSWD: ALL'"
+
+    # User configuration
+    - name: Create user
+      user: name={{ myuser.name }} uid={{ myuser.uid }} comment={{ myuser.comment }} shell={{ myuser.shell }} groups={{ myuser.groups }} append=yes
+
+    - name: Add public key
+      authorized_key: 'user={{ myuser.name }} key="{{ myuser.ssh_key_pub }}"'
+
+    # Install default toolset
+    - name: Install utilities
+      yum: name={{ item }} state=present
+      with_items:
+        - "{{ toolset }}"

@@ -1,0 +1,23 @@
+---
+
+# variables for basic configuration
+
+myuser:
+  name: 'dlennart'
+  uid: 566
+  comment: 'Daniel\ Lennart'
+  groups: 'admin,docker'
+  append: yes
+  shell: '/bin/bash'
+  ssh_key_pub: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLYQzPgQdFWei8iolXrEkidrXNYCi0NqGckwdjsi+QW2UJ41dDp3nvmD25UaOcs5qmETz3OmxRkQpnPlNQqyVDEl3ND7Zt//7X5W+xQg1EvG6rDUm2AEKSns7aFDaLsmJHS4JxtCWjtUVx9SPeZWiIVtKSc1d589BWLrvWiLpLul/mR+oAFpqnNWik0gFQjWUJVUHq/OT+OTQChPyUdyJjq2fw0puf4BRcy6RT7vMqUGvyUSQfiuCCD65sL1pSDXYXJcFGTNc3b7G8qfewC2G6i1GhSsNqyRTxdtzgaNIbIRBFR6yADam2871rRYEzhA92GiakX0MlDd9QxaKXWPAv dlennart.uk@gmail.com'
+
+
+toolset:
+  - vim
+  - vim-enhanced
+  - mlocate
+  - python-devel
+  - git
+  - python-pip
+  - python-virtualenv
+  - gcc

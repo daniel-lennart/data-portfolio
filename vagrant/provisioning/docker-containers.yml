@@ -1,0 +1,32 @@
+---
+#-- Ansible playbook to create and start docker containers -----#
+
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Docker Python
+      yum:
+        name: '{{ item }}'
+        state: 'present'
+      with_items:
+        - python-docker-py
+        - python-docker-scripts
+
+    - name: Create Jenkins data volume container
+      docker:
+        name: jenkins-data
+        image: jenkinsci/jenkins:lts
+        state: present
+        volumes:
+          - /var/jenkins_home
+    - name: Create and start Jenkins server
+      docker:
+        name: jenkins
+        image: jenkinsci/jenkins:lts
+        state: started
+        ports:
+          - 8080:8080
+          - 50000:50000
+        volumes_from:
+          - jenkins-data

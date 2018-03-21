@@ -1,0 +1,48 @@
+required_plugins = %w( vagrant-triggers )
+required_plugins.each do |plugin|
+    exec "vagrant plugin install #{plugin};vagrant #{ARGV.join(" ")}" unless Vagrant.has_plugin? plugin || ARGV[0] == 'plugin'
+end
+
+Vagrant.configure("2") do |config|
+
+  # General config
+  config.vbguest.auto_update = true
+  config.ssh.insert_key = false
+  config.vm.box = "centos/7"
+  config.vm.hostname = "cloud-host-01"
+
+  # Hardware configuration
+  config.vm.provider 'virtualbox' do |vb|
+      vb.customize ["modifyvm", :id, "--memory", 3072]
+      vb.customize ["modifyvm", :id, "--cpus", 2]
+  end
+
+  # Network
+  config.vm.network :private_network, ip: '192.168.78.100'
+  config.vm.network :forwarded_port, guest: 22, host: 2229, id: 'ssh'
+
+  # Shared folders
+  #config.vm.synced_folder '../../datasets', '/src/datasets', disabled: true, type: "virtualbox"
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+
+  # Provisioning
+  config.vm.provision :shell, inline: "yum install -y epel-release"
+  config.vm.provision :shell, inline: "yum install -y dkms"
+  config.vm.provision :shell, inline: "yum install -y make gcc"
+  config.vm.provision :shell, inline: "yum install -y kernel-devel"
+  config.vm.provision :shell, inline: "yum install -y ansible"
+  config.vm.provision :shell, inline: "yum upgrade -y"
+
+  config.vm.provision :shell, inline: "ansible-galaxy install geerlingguy.docker"
+  config.vm.provision :ansible_local, playbook: "provisioning/docker.yml"
+  config.vm.provision :ansible_local, playbook: "provisioning/base_config.yml"
+  config.vm.provision :ansible_local, playbook: "provisioning/docker-containers.yml", run: 'always'
+
+  #--  Triggers on changing state ---------------#
+  # Backup data volumes before vm is switched off
+  config.trigger.before :halt do
+    info "Dumping the data volume before destroying the VM..."
+    run_remote  "bash /etc/init.d/backup_volumes.sh"
+  end
+
+end
