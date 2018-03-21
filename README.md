@@ -22,7 +22,9 @@ For more information about what I do see
 Ansible is software that automates software provisioning, configuration management, and application deployment.
 
 * [Cheatsheet](../master/ansible/cheatsheet.md)
-* [Snippets](../master/ansible/snippets.md)
+* [User provisioning](../master/vagrant/provisioning/base_config.yml)
+* [Install Docker](../master/vagrant/provisioning/docker.yml)
+* [Create and start docker containers](../master/vagrant/provisioning/docker-containers.yml)
 
 ## Docker
 ![docker logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/docker.png)
