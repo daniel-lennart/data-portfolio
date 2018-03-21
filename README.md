@@ -15,6 +15,7 @@ For more information about what I do see
   - [Vagrant](#vagrant)
   - [Terraform](#terraform)
   - [R](#r)
+  - [Machine Learing](#machine learning)
 
 ## <a name="ansible"></a>Ansible
 ![ansible logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ansible-logo.png)
@@ -46,6 +47,13 @@ Vagrant is an open-source software product for building and maintaining portable
 HashiCorp Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
 
 * [Deep learning environment provisioning](../master/terraform)
+
+## Machine learning
+![ml logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ml.png)
+
+Examples of machine learning projects
+* [ML workflow to predict property prices](../master/property-project)
+
 
 ## R
 ![R logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/r.png)
