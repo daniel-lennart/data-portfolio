@@ -15,7 +15,7 @@ For more information about what I do see
   - [Vagrant](#vagrant)
   - [Terraform](#terraform)
   - [R](#r)
-  - [Machine Learing](#machine learning)
+  - [Machine Learing](#machine)
 
 ## <a name="ansible"></a>Ansible
 ![ansible logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ansible-logo.png)
