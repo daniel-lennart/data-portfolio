@@ -15,7 +15,7 @@ For more information about what I do see
   - [Vagrant](#vagrant)
   - [Terraform](#terraform)
   - [R](#r)
-  - [Machine Learing](#machine)
+  - [Data](#data)
 
 ## <a name="ansible"></a>Ansible
 ![ansible logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ansible-logo.png)
@@ -48,11 +48,12 @@ HashiCorp Terraform enables you to safely and predictably create, change, and im
 
 * [Deep learning environment provisioning](../master/terraform)
 
-## Machine learning
+## Data
 ![ml logo](https://github.com/daniel-lennart/data-portfolio/blob/master/images/ml.png)
 
-Examples of machine learning projects
-* [ML workflow to predict property prices](../master/property-project)
+Examples of data projects
+* [Complete machine learning workflow to predict property prices](../master/property-project)
+* [Data challenge to predict movie profit ](../master/box-office-predictions)
 
 
 ## R
