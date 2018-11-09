@@ -23,7 +23,7 @@ ansible-playbook -i inventories/inventory.sh -l [ group name ] [ playbook name ]
 #### Run command against all servers
 
 ```
-ansible -i inventories/inventory.sh '*' -m shell -a 'grep "https://mgmt" /etc/yum.repos.d/remi*'
+ansible -i inventories/inventory.sh '*' -m shell -a 'grep "repo" /etc/yum.repos.d/remi*'
 ```
 
 #### Run release against 1 server
@@ -65,7 +65,7 @@ ansible-playbook -i inventories/inventory.sh -u centos -l group_staging [release
 #### Run user management playbooks from main release playbook
 
 ```
-ansible-playbook -i inventories/inventory.sh -u centos -l max-main-stg02 --tags "user_management" [release playbook]
+ansible-playbook -i inventories/inventory.sh -u centos -l [ group ] --tags "user_management" [release playbook]
 ```
 
 #### Limit playbook to  several groups and list hosts
