@@ -25,5 +25,5 @@ Project was written using Python and following libraries:
 Also I used [Jupyter notebooks](https://jupyter.org/) for the ML code and [Flask framework](http://flask.pocoo.org/) for final model deployment.
 
 ## Project structure
-* [Data](../master/property-project/notebooks/data/)
-* [Notebooks](../master/property-project/notebooks/)
+* [Data](../property-project/notebooks/data/)
+* [Notebooks](../property-project/notebooks/)
